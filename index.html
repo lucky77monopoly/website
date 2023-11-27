@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Lucky77</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <style>
+    @media (min-width:0px) {
+      #btnpm {
+        background-image: url('static/play.png');
+        width: 269px;
+        height: 115px;
+        display: block;
+      }
+      #btnpm:hover {
+        background-image: url('static/play2.png');
+      }
+      #logo {
+        position: fixed;
+        top:20%;
+        left:15%;
+      }
+      #play {
+        position: fixed;
+        top:65%;
+        left:17%;
+      }
+      #main-p {
+        display: none;
+      }
+      #btnpp {
+        display: none;
+      }
+      #main-m1 {
+        display: block;
+      }
+      #main-m2 {
+        display: block;
+      }
+      #main-m3 {
+        display: block;
+      }
+      #topnav {
+        display: none;
+      }
+      #topnavm {
+        display: block;
+      }
+    }
+
+    @media (min-width:750px) {
+      #btnpp {
+        position: fixed;
+        top:65%;
+        left:16%;
+        background-image: url('static/play.png');
+        width: 269px;
+        height: 115px;
+        display: block;
+      }
+      #btnpp:hover {
+        background-image: url('static/play2.png');
+      }
+      #logo {
+        position: fixed;
+        top:20%;
+        left:15%;
+      }
+      #main-p {
+        display: block;
+      }
+      #main-m1 {
+        display: none;
+      }
+      #main-m2 {
+        display: none;
+      }
+      #main-m3 {
+        display: none;
+      }
+      #btnpm {
+        display: none;
+      }
+      #topnavm {
+        display: none;
+      }
+      #topnav {
+        display: block;
+      }
+    }
+
+    .background-image {
+      background-image: url('static/bg.png');
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .d {
+      background-color: #dedef8;
+      box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;
+    }
+
+    #btnt {
+      background-image: url('static/twitter.png');
+      width: 31px;
+      height: 44px;
+      display: block;
+    }
+    #btnt:hover {
+      background-image: url('static/twitter2.png');
+    }
+    #btnd {
+      background-image: url('static/dico.png');
+      width: 37px;
+      height: 44px;
+      display: block;
+    }
+    #btnd:hover {
+      background-image: url('static/dico2.png');
+    }
+    #btnwp {
+      background-image: url('static/wp.png');
+      width: 36px;
+      height: 44px;
+      display: block;
+    }
+    #btnwp:hover {
+      background-image: url('static/wp2.png');
+    }
+    #btnw {
+      background-image: url('static/wallet.png');
+      width: 130px;
+      height: 44px;
+      display: block;
+    }
+    #btnw:hover {
+      background-image: url('static/wallet2.png');
+    }
+
+    #btntm {
+      background-image: url('static/twitterm.png');
+      width: 19px;
+      height: 27px;
+      display: block;
+    }
+    #btntm:hover {
+      background-image: url('static/twitter2m.png');
+    }
+    #btndm {
+      background-image: url('static/dicom.png');
+      width: 22px;
+      height: 26px;
+      display: block;
+    }
+    #btndm:hover {
+      background-image: url('static/dico2m.png');
+    }
+    #btnwpm {
+      background-image: url('static/wpm.png');
+      width: 22px;
+      height: 27px;
+      display: block;
+    }
+    #btnwpm:hover {
+      background-image: url('static/wp2m.png');
+    }
+    #btnwm {
+      background-image: url('static/walletm.png');
+      width: 78px;
+      height: 26px;
+      display: block;
+    }
+    #btnwm:hover {
+      background-image: url('static/wallet2m.png');
+    }
+  </style>
+</head>
+
+<body>
+  <div class="background-image"></div>
+
+  <div id="topnav" class="container-fluid">
+    <div class="row" style="height: 44px; background-color: #0e1011; opacity: 0.7;">
+      <div class="col-2"></div>
+      <div class="col-1"><a href="#" id="btnt" class="animate__animated animate__headShake"></a></div>
+      <div class="col-1"><a href="#" id="btnd" class="animate__animated animate__headShake"></a></div>
+      <div class="col-1"><a href="#" id="btnwp" class="animate__animated animate__headShake"></a></div>
+      <div class="col-4"></div>
+      <div class="col-3"><a href="#" id="btnw" class="img-fluid animate__animated animate__headShake"></a></div>
+    </div>
+  </div>
+  <div id="topnavm" class="container-fluid">
+    <div class="row" style="height: 27px; background-color: #0e1011; opacity: 0.7;">
+      <div class="col-1"></div>
+      <div class="col-1"><a href="#" id="btntm" class="animate__animated animate__headShake"></a></div>
+      <div class="col-1"><a href="#" id="btndm" class="animate__animated animate__headShake"></a></div>
+      <div class="col-1"><a href="#" id="btnwpm" class="animate__animated animate__headShake"></a></div>
+      <div class="col-4"></div>
+      <div class="col-4"><a href="#" id="btnwm" class="img-fluid animate__animated animate__headShake"></a></div>
+    </div>
+  </div>
+
+  <div id="main-p" class="container" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);">
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-5">
+        <img id="logo" src="static/logo.png" class="animate__animated animate__headShake">
+        <a href="#" id="btnpp" class="img-fluid animate__animated animate__headShake"></a>
+      </div>
+      <div class="col-5"><img id="ren" src="static/ren.png" class="animate__animated animate__headShake"></div>
+      <div class="col-1"></div>
+    </div>
+  </div>
+
+  <div id="main-m1" class="container-fluid">
+    <div class="row"><img src="static/logo.png" style="width: 50%; position: absolute; top: 15%; left: 50%; transform: translate(-50%);"></div>
+  </div>
+  <div id="main-m2" class="container">
+    <div class="row"><img src="static/ren.png" style="width: 50%; position: absolute; top: 30%; left: 50%; transform: translate(-50%);"></div>
+  </div>
+  <div id="main-m3" class="container">
+    <div class="row"><a href="#" style="display: block;"><img src="static/play.png" style="width: 45%; position: absolute; top: 80%; left: 50%; transform: translate(-50%);"></a></div>
+  </div>
+
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
