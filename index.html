@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Lucky77</title>
+  <title>Title</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -49,7 +49,7 @@
       #topnav {
         display: none;
       }
-      #topnavm {
+      #topnavm,#bottomnavm{
         display: block;
       }
     }
@@ -87,7 +87,7 @@
       #btnpm {
         display: none;
       }
-      #topnavm {
+      #topnavm,#bottomnavm {
         display: none;
       }
       #topnav {
@@ -97,6 +97,7 @@
 
     .background-image {
       background-image: url('static/bg.png');
+      background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
       position: absolute;
@@ -150,40 +151,61 @@
     }
 
     #btntm {
-      background-image: url('static/twitterm.png');
-      width: 19px;
-      height: 27px;
+      background-image: url('static/x1.png');
+      background-size: cover;
+      width: 38px;
+      height: 40px;
       display: block;
     }
     #btntm:hover {
-      background-image: url('static/twitter2m.png');
+      background-image: url('static/x2.png');
     }
     #btndm {
-      background-image: url('static/dicom.png');
+      background-image: url('static/c1.png');
+      background-size: cover;
       width: 22px;
-      height: 26px;
+      height: 20px;
       display: block;
     }
     #btndm:hover {
-      background-image: url('static/dico2m.png');
+      background-image: url('static/c2.png');
     }
     #btnwpm {
-      background-image: url('static/wpm.png');
+      background-image: url('static/s1.png');
+      background-size: cover;
       width: 22px;
       height: 27px;
       display: block;
     }
     #btnwpm:hover {
-      background-image: url('static/wp2m.png');
+      background-image: url('static/s2.png');
     }
     #btnwm {
-      background-image: url('static/walletm.png');
-      width: 78px;
-      height: 26px;
-      display: block;
+      height: 50px;
+      padding: 5px;
     }
     #btnwm:hover {
-      background-image: url('static/wallet2m.png');
+      content: url('static/w2.png');
+    }
+
+    #tnav-w {
+      padding: 0px;
+    }
+    #tnav-w:hover {
+      content: url('static/w2.png');
+    }
+    #bnav-t, #bnav-d, #bnav-w {
+      height: 45px; 
+      padding: 6px;
+    }
+    #bnav-t:hover {
+      content: url('static/x2.png');
+    }
+    #bnav-d:hover {
+      content: url('static/c2.png');
+    }
+    #bnav-w:hover {
+      content: url('static/s2.png');
     }
   </style>
 </head>
@@ -192,23 +214,20 @@
   <div class="background-image"></div>
 
   <div id="topnav" class="container-fluid">
-    <div class="row" style="height: 44px; background-color: #0e1011; opacity: 0.7;">
+    <div class="row" style="height: 44px; background: rgba(14,16,17,0.7);">
       <div class="col-2"></div>
-      <div class="col-1"><a href="https://x.com/Lucky77monopoly" target="_blank" id="btnt" class="animate__animated animate__headShake"></a></div>
+      <div class="col-1"><a href="#" id="btnt" class="animate__animated animate__headShake"></a></div>
       <div class="col-1"><a href="#" id="btnd" class="animate__animated animate__headShake"></a></div>
-      <div class="col-1"><a href="https://jasonlab.gitbook.io/lucky77/" target="_blank" id="btnwp" class="animate__animated animate__headShake"></a></div>
+      <div class="col-1"><a href="#" id="btnwp" class="animate__animated animate__headShake"></a></div>
       <div class="col-4"></div>
       <div class="col-3"><a href="#" id="btnw" class="img-fluid animate__animated animate__headShake"></a></div>
     </div>
   </div>
-  <div id="topnavm" class="container-fluid">
-    <div class="row" style="height: 27px; background-color: #0e1011; opacity: 0.7;">
-      <div class="col-1"></div>
-      <div class="col-1"><a href="#" id="btntm" class="animate__animated animate__headShake"></a></div>
-      <div class="col-1"><a href="#" id="btndm" class="animate__animated animate__headShake"></a></div>
-      <div class="col-1"><a href="#" id="btnwpm" class="animate__animated animate__headShake"></a></div>
-      <div class="col-4"></div>
-      <div class="col-4"><a href="#" id="btnwm" class="img-fluid animate__animated animate__headShake"></a></div>
+
+  <div id="topnavm" class="container-fluid" style="background: rgba(14,16,17,0.7);">
+    <div class="row">
+      <div class="col-6"><img class="position-relative top-50 translate-middle-y" src="static/logo.png" style="height: 40px;"></div>
+      <div class="col-6"><a href="#"><img id="tnav-w" src="static/w1.png" class="float-end"></a></div>
     </div>
   </div>
 
@@ -224,16 +243,22 @@
     </div>
   </div>
 
-  <div id="main-m1" class="container-fluid">
-    <div class="row"><img src="static/logo.png" style="width: 50%; position: absolute; top: 15%; left: 50%; transform: translate(-50%);"></div>
-  </div>
   <div id="main-m2" class="container">
-    <div class="row"><img src="static/ren.png" style="width: 50%; position: absolute; top: 30%; left: 50%; transform: translate(-50%);"></div>
+    <div class="row"><img src="static/ren.png" style="width: 60%; position: absolute; top: 20%; left: 50%; transform: translate(-50%);"></div>
   </div>
   <div id="main-m3" class="container">
-    <div class="row"><a href="#" style="display: block;"><img src="static/play.png" style="width: 45%; position: absolute; top: 80%; left: 50%; transform: translate(-50%);"></a></div>
+    <div class="row"><a href="#" style="display: block;"><img src="static/play.png" style="width: 45%; position: absolute; top: 65%; left: 50%; transform: translate(-50%);"></a></div>
   </div>
 
+  <div id="bottomnavm" class="container-fluid fixed-bottom text-center" style="background: rgba(32,32,32,1);">
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-3"><a href="#"><img id="bnav-t" src="static/x1.png"></a></div>
+      <div class="col-4"><a href="#"><img id="bnav-d" src="static/c1.png"></a></div>
+      <div class="col-3"><a href="#"><img id="bnav-w" src="static/s1.png"></a></div>
+      <div class="col-1"></div>
+    </div>
+  </div>
 
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
